@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E4E65010-12AE-40F2-B87A-EFCA60742354}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9E49119F-2674-4B81-95C7-8806E8866EE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{BC9705B6-108C-4BA5-8BEC-CC3D6D001AE0}"
+	ProjectSection(SolutionItems) = preProject
+		src\external\plink.exe = src\external\plink.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factorio-HR", "src\Factorio-HR\Factorio-HR.csproj", "{A86AF775-420C-4643-9C3F-083B3CB31D81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A86AF775-420C-4643-9C3F-083B3CB31D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86AF775-420C-4643-9C3F-083B3CB31D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86AF775-420C-4643-9C3F-083B3CB31D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86AF775-420C-4643-9C3F-083B3CB31D81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC9705B6-108C-4BA5-8BEC-CC3D6D001AE0} = {E4E65010-12AE-40F2-B87A-EFCA60742354}
+		{A86AF775-420C-4643-9C3F-083B3CB31D81} = {E4E65010-12AE-40F2-B87A-EFCA60742354}
+	EndGlobalSection
+EndGlobal
