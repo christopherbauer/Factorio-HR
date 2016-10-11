@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Windows.Input;
-using Factorio_HR.ViewModel.Designer;
+using Factorio_HR.Services;
 
-namespace Factorio_HR.Command
+namespace Factorio_HR.ViewModels.Commands
 {
     public class SendMessageCommand : ICommand
     {
+        private readonly MainWindowViewModel _mainWindowViewModel;
         private readonly IInteractiveLoginAdapter _interactiveLoginAdapter;
 
-        public SendMessageCommand(IInteractiveLoginAdapter interactiveLoginAdapter)
+        public SendMessageCommand(MainWindowViewModel mainWindowViewModel, IInteractiveLoginAdapter interactiveLoginAdapter)
         {
+            _mainWindowViewModel = mainWindowViewModel;
             _interactiveLoginAdapter = interactiveLoginAdapter;
         }
 
@@ -20,8 +22,7 @@ namespace Factorio_HR.Command
 
         public void Execute(object parameter)
         {
-            var message = (string) parameter;
-            _interactiveLoginAdapter.SendCommand(message);
+            _interactiveLoginAdapter.SendCommand(_mainWindowViewModel.CommandText);
         }
 
         public event EventHandler CanExecuteChanged;

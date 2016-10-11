@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Factorio_HR.ViewModel.Designer
+namespace Factorio_HR.ViewModels
 {
     public abstract class BaseViewModel : INotifyPropertyChanged
     {

@@ -56,12 +56,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Command\SendMessageCommand.cs" />
-    <Compile Include="ViewModel\Designer\BaseViewModel.cs" />
-    <Compile Include="ViewModel\Designer\ISettingService.cs" />
-    <Compile Include="ViewModel\Designer\IInteractiveLoginAdapter.cs" />
-    <Compile Include="ViewModel\Designer\MainWindowViewModel.cs" />
-    <Compile Include="ViewModel\Designer\MainWindowViewModelDesigner.cs" />
+    <Compile Include="ViewModels\Commands\SendMessageCommand.cs" />
+    <Compile Include="Services\AppSettingService.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="Services\Message\ChatMessage.cs" />
+    <Compile Include="Services\Message\ChatMessageType.cs" />
+    <Compile Include="Services\IMessageBus.cs" />
+    <Compile Include="Services\Message\IMessageType.cs" />
+    <Compile Include="Services\ISettingService.cs" />
+    <Compile Include="Services\IInteractiveLoginAdapter.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\DesignerViewModels\MainWindowViewModelDesigner.cs" />
+    <Compile Include="Services\MessageBus.cs" />
+    <Compile Include="Services\CmdAdapter.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -109,6 +116,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

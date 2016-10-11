@@ -1,5 +1,6 @@
 ﻿using System.Windows;
-using Factorio_HR.ViewModel.Designer;
+using Factorio_HR.Services;
+using Factorio_HR.ViewModels;
 
 namespace Factorio_HR
 {
@@ -10,7 +11,8 @@ namespace Factorio_HR
     {
         public MainWindow()
         {
-            DataContext = new MainWindowViewModel(new PLinkAdapter(new SettingService()));
+            var messageBusSingleton = new MessageBus();
+            DataContext = new MainWindowViewModel(new CmdAdapter(new AppSettingService(), messageBusSingleton), messageBusSingleton);
             InitializeComponent();
         }
     }

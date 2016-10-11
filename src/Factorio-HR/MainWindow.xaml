@@ -4,9 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Factorio_HR"
-        xmlns:designer="clr-namespace:Factorio_HR.ViewModel.Designer"
+        xmlns:designerViewModels="clr-namespace:Factorio_HR.ViewModels.DesignerViewModels"
         mc:Ignorable="d"
-        Title="Factorio HR" Height="350" Width="525" d:DataContext="{d:DesignInstance designer:MainWindowViewModelDesigner, IsDesignTimeCreatable=True}">
+        Title="Factorio HR" Height="350" Width="525" d:DataContext="{d:DesignInstance designerViewModels:MainWindowViewModelDesigner, IsDesignTimeCreatable=True}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -17,12 +17,12 @@
         </StackPanel>
         <DockPanel Grid.Column="1" VerticalAlignment="Stretch">
             <DockPanel DockPanel.Dock="Bottom">
-                <Button DockPanel.Dock="Right" Command="{Binding SendCommandCommand}">Send</Button>
+                <Button DockPanel.Dock="Right" Command="{Binding SendCommandCommand}" Padding="8 2 8 2">Send</Button>
                 <TextBox DockPanel.Dock="Left" Text="{Binding CommandText}"></TextBox>
             </DockPanel>
             
             
-            <TextBlock DockPanel.Dock="Top" Text="{Binding ChatLog}" />
+            <TextBlock DockPanel.Dock="Top" Text="{Binding ChatLog}"  />
         </DockPanel>
     </Grid>
 </Window>
